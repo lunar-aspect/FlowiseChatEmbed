@@ -4,6 +4,7 @@ type Props = {
     botContainer: HTMLDivElement | undefined;
     poweredByTextColor?: string;
     badgeBackgroundColor?: string;
+    showFooter?: boolean;
 };
 export declare const Badge: (props: Props) => import("solid-js").JSX.Element;
 export {};

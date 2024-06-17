@@ -6,6 +6,7 @@ type Props = {
   botContainer: HTMLDivElement | undefined;
   poweredByTextColor?: string;
   badgeBackgroundColor?: string;
+  showFooter?: boolean;
 };
 
 const defaultTextColor = '#303235';
@@ -40,7 +41,9 @@ export const Badge = (props: Props) => {
 
   return (
     <>
-      <Show when={props.footer?.showFooter === undefined || props.footer?.showFooter === null || props.footer?.showFooter === true}>
+      <Show
+        when={props.showFooter && (props.footer?.showFooter === undefined || props.footer?.showFooter === null || props.footer?.showFooter === true)}
+      >
         <span
           class="w-full text-center px-[10px] pt-[6px] pb-[10px] m-auto text-[13px]"
           style={{

@@ -51,7 +51,7 @@ export const Badge = (props: Props) => {
             'background-color': props.badgeBackgroundColor ?? '#ffffff',
           }}
         >
-          Andrii
+          Lunar
         </span>
       </Show>
       <Show when={props.footer?.showFooter === false}>

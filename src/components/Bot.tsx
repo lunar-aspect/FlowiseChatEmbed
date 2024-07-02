@@ -311,6 +311,14 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
     handleSubmit(prompt);
   };
 
+  const customMessageSend = (message: string) => {
+    handleSubmit(message);
+  };
+
+  //eslint-disable-next-line
+  // @ts-ignore
+  window.exposedBotMessageSend = customMessageSend;
+
   // Handle form submission
   const handleSubmit = async (value: string) => {
     setUserInput(value);
